@@ -25,8 +25,8 @@
 		"version": "changeset version"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.5.9",
-		"@changesets/cli": "^3.0.1",
+		"@biomejs/biome": "2.5.12",
+		"@changesets/cli": "^3.0.2",
 		"@commitlint/cli": "^21.2.2",
 		"@commitlint/config-conventional": "^21.2.2",
 		"@repobuddy/biome": "2.3.1",
