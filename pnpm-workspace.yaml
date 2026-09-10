@@ -10,14 +10,21 @@ allowBuilds:
   esbuild: true
 
 # A newly published version is not installable until it has been on the registry for
-# 10 days. This is a supply-chain control: it is what stops a compromised release from
+# 24 hours. This is a supply-chain control: it is what stops a compromised release from
 # being pulled into a build within hours of publication.
+#
+# 1440 is the fleet standard, and it must not exceed the Renovate preset's own
+# `minimumReleaseAge` (currently "1 day"). Renovate raises a PR as soon as its window
+# elapses and then regenerates the lockfile; if pnpm's soak is longer, that regeneration
+# fails with ERR_PNPM_OUTDATED_LOCKFILE and every dependency PR is unmergeable until the
+# difference elapses. This template previously used 14400 (10 days), which made its own
+# dependency PRs fail for nine days out of every ten.
 #
 # There is deliberately NO `minimumReleaseAgeExclude` list here. Adding one is how the
 # control gets hollowed out one "just this once" at a time, and in a template every
 # entry propagates as a taught reflex. On ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION, run
 # `pnpm clean --lockfile` then a plain `pnpm install` — wait the soak out.
-minimumReleaseAge: 14400 # 10 days
+minimumReleaseAge: 1440 # 1 day
 #
 # `minimumReleaseAgeStrict` is what makes the paragraph above true. Without it pnpm's
 # soak runs LOOSE: it does not reject a too-young package, it appends that package to
