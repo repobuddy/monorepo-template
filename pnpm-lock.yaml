@@ -82,7 +82,7 @@ importers:
         version: 2.1.2(@vitest/browser-playwright@4.1.11)(vitest@4.1.11)
       '@size-limit/preset-small-lib':
         specifier: ~14.0.0
-        version: 14.0.0(size-limit@13.0.3)
+        version: 14.0.0(size-limit@14.0.1)
       '@storybook/addon-a11y':
         specifier: ^10.6.0
         version: 10.6.0(storybook@10.5.10(@types/react@19.2.18)(prettier@2.8.8)(react@19.2.8))
@@ -123,8 +123,8 @@ importers:
         specifier: ~6.1.3
         version: 6.1.3
       size-limit:
-        specifier: ~13.0.3
-        version: 13.0.3
+        specifier: ~14.0.0
+        version: 14.0.1
       storybook:
         specifier: ^10.5.10
         version: 10.5.10(@types/react@19.2.18)(prettier@2.8.8)(react@19.2.8)
@@ -2177,10 +2177,6 @@ packages:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
 
-  bytes-iec@3.1.1:
-    resolution: {integrity: sha512-fey6+4jDK7TFtFg/klGSvNKJctyU7n2aQdnM+CO0ruLPbqqMOM8Tio0Pc+deqUeVKX1tL5DQep1zQ7+37aTAsA==}
-    engines: {node: '>= 0.8'}
-
   cac@7.0.0:
     resolution: {integrity: sha512-tixWYgm5ZoOD+3g6UTea91eow5z6AAHaho3g0V9CNSNb45gM8SmflpAc+GRd1InC4AqN/07Unrgp56Y94N9hJQ==}
     engines: {node: '>=20.19.0'}
@@ -3077,9 +3073,9 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  size-limit@13.0.3:
-    resolution: {integrity: sha512-KVb2aNEU49BwTR21SVjD+2QHP9gBV/nWsTHzNB/heRwXtHyA7lLQiDZDQ1TiNh/B/TZXKAZrHYyTt+cvBUrzYw==}
-    engines: {node: ^22.18.0 || ^24.0.0 || >=26.0.0}
+  size-limit@14.0.1:
+    resolution: {integrity: sha512-+ht/E62dNimsDEZSIsBubYoUY3V4EkkAZdsOrN6t4IO8h4Xvd9H+xy9okOgj53eodnd7Jub0lsk33kafcjWgRg==}
+    engines: {node: ^22.19.0 || ^24.5.0 || >=26.0.0}
     hasBin: true
 
   smol-toml@1.8.0:
@@ -4526,20 +4522,20 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@size-limit/file@14.0.0(size-limit@13.0.3)':
+  '@size-limit/file@14.0.0(size-limit@14.0.1)':
     dependencies:
-      size-limit: 13.0.3
+      size-limit: 14.0.1
 
-  '@size-limit/preset-small-lib@14.0.0(size-limit@13.0.3)':
+  '@size-limit/preset-small-lib@14.0.0(size-limit@14.0.1)':
     dependencies:
-      '@size-limit/file': 14.0.0(size-limit@13.0.3)
-      '@size-limit/rolldown': 14.0.0(size-limit@13.0.3)
-      size-limit: 13.0.3
+      '@size-limit/file': 14.0.0(size-limit@14.0.1)
+      '@size-limit/rolldown': 14.0.0(size-limit@14.0.1)
+      size-limit: 14.0.1
 
-  '@size-limit/rolldown@14.0.0(size-limit@13.0.3)':
+  '@size-limit/rolldown@14.0.0(size-limit@14.0.1)':
     dependencies:
       rolldown: 1.2.8
-      size-limit: 13.0.3
+      size-limit: 14.0.1
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -5147,8 +5143,6 @@ snapshots:
   bundle-name@4.1.0:
     dependencies:
       run-applescript: 7.1.0
-
-  bytes-iec@3.1.1: {}
 
   cac@7.0.0: {}
 
@@ -6064,9 +6058,8 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  size-limit@13.0.3:
+  size-limit@14.0.1:
     dependencies:
-      bytes-iec: 3.1.1
       lilconfig: 3.1.3
       nanospinner: 1.2.2
 
