@@ -8,6 +8,11 @@
 			"automerge": true
 		},
 		{
+			"description": "Storybook 10.5 (addon-vitest) supports vitest <=4; lift when the installed Storybook allows vitest 5.",
+			"matchPackageNames": ["vitest", "@vitest/*"],
+			"allowedVersions": "<5"
+		},
+		{
 			"description": "Majors are a human decision.",
 			"matchUpdateTypes": ["major"],
 			"automerge": false
