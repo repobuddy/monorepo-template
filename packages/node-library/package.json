@@ -51,7 +51,7 @@
 		"w:test": "vitest"
 	},
 	"devDependencies": {
-		"@repobuddy/typescript": "^2.1.0",
+		"@repobuddy/typescript": "^2.2.1",
 		"@repobuddy/vitest": "^2.1.2",
 		"@size-limit/preset-small-lib": "~14.1.0",
 		"@storybook/addon-a11y": "^10.6.0",
