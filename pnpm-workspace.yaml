@@ -33,3 +33,6 @@ minimumReleaseAge: 1440 # 1 day
 # list nobody decided to add, one entry per offending install. Strict turns the same
 # situation into ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION instead.
 minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  # Renovate security update: storybook@10.6.2
+  - storybook@10.6.2
